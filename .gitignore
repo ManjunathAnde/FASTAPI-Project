@@ -1,0 +1,4 @@
+# Created by venv; see https://python.org
+myenv/
+frontend/node_modules/
+.env
