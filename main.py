@@ -26,3 +26,10 @@ def get_single_product(sno:int):
                    'prod_details': product
                    } #If found, return the instance.
     return {"error": f"Product with ID {sno} not found"} #error handling
+
+@app.post("/products")
+def add_product(input:Products): #accepting input in form of Products (a blueprint)
+    products.append(input)
+    return {"message":"Add successful", "item" : input}
+
+print(products)
