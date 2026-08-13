@@ -1,10 +1,13 @@
-class Products: 
+from pydantic import BaseModel 
+
+class Products (BaseModel): 
     id: int #Using Python Hints to predefine data types
     name:str
     description:str
     price:float
     quantity:int
-    
+
+    #Constructor 
     def __init__(self, id: int, name: str, description: str, price: float, quantity: int):
         self.id = id
         self.name = name
