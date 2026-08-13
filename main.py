@@ -25,3 +25,4 @@ def get_single_product(sno:int):
             return{'message': 'Hurray! Product found',
                    'prod_details': product
                    } #If found, return the instance.
+    return {"error": f"Product with ID {sno} not found"} #error handling
