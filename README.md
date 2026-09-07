@@ -1,6 +1,6 @@
 # FastAPI Backend Engineering
 
-> A hands-on progression from FastAPI fundamentals to production-oriented backend architecture — covering REST APIs, validation, persistence, ORM design, dependency injection, and asynchronous Python.
+> A hands-on progression from FastAPI fundamentals to production-oriented backend architecture covering REST APIs, validation, persistence, ORM design, dependency injection, and asynchronous Python.
 
 This repository documents my practical journey into **modern backend engineering with FastAPI**. Rather than treating FastAPI as a collection of tutorials, I’m using the project to progressively build and refactor backend systems using patterns that scale beyond a single script or demo application.
 
