@@ -13,7 +13,7 @@ products = [  #Instantiating the classes
     Products(id=4, name="Table", description="A wooden table", price=199.99, quantity=20)
 ]
 
-@app.get("/products") #usinf GET method to display information when the user routes to 'skills' in the web app. 
+@app.get("/products") #using GET method to display information when the user routes to 'products' in the web app. 
 def get_products():
     return products
 
@@ -28,7 +28,7 @@ def get_single_product(sno:int):
     return {"error": f"Product with ID {sno} not found"} #error handling
 
 @app.post("/products")
-def add_product(input:Products): #accepting input in form of Products (a blueprint)
+def add_product(input:Products): #accepting input in form of Products and appending to roster
     products.append(input)
     return {"message":"Add successful", "item" : input}
 
