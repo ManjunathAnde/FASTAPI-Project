@@ -1,4 +1,4 @@
-from sqlalchemy import sessionmaker #single interaction/transaction as user hits the endpoint
+from sqlalchemy.orm import sessionmaker #single interaction/transaction as user hits the endpoint
 from sqlalchemy import create_engine #permanent main pipeline between python and db until FASTAPI server is running.
 
 db_url = "mysql+pymysql://root:12345@127.0.0.1:3306/fastapi_db" #points to schema in db in MySQL

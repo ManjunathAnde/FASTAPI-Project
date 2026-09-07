@@ -1,6 +1,11 @@
 from fastapi import FastAPI
 from models import Products
-from database import db_session
+from database import db_session,engine
+import database_models
+
+database_models.dec_base.metadata.create_all(bind=engine)
+#create a table with all metadata in dec_base class and bind it with engine
+
 app = FastAPI() #creating an instance of FASTAPI
 
 @app.get("/") # using GET HTTP method to see information in homepage
@@ -16,6 +21,8 @@ products = [  #Instantiating the classes
 
 @app.get("/products") #using GET method to display information when the user routes to 'products' in the web app. 
 def get_products():
+    db=db_session()
+    db.query
     return products
 
 sno:int=1
