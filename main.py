@@ -36,3 +36,8 @@ print(products)
 
 @app.put("/products")
 def update_product(id:int,product:Products):
+    for i in range(len(Products)):
+        if Products[i].id == id:
+            Products[i] == product
+            return "Product update successful"
+    return "Product not found"
