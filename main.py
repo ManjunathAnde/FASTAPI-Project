@@ -20,10 +20,10 @@ products = [  #Instantiating the classes
 ]
 
 def init_db():
-    db=db_session()
+    db=db_session() #creating a db session
     for product in products:
         db.add(database_models.Products(**product.model_dump()))
-    db.commit()
+    db.commit() #committing to db
 init_db()
 
 
