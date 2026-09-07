@@ -33,3 +33,6 @@ def add_product(input:Products): #accepting input in form of Products and append
     return {"message":"Add successful", "item" : input}
 
 print(products)
+
+@app.put("/products")
+def update_product(id:int,product:Products):
