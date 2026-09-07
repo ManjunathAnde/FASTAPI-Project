@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from models import Products
+from database import db_session
 app = FastAPI() #creating an instance of FASTAPI
 
 @app.get("/") # using GET HTTP method to see information in homepage
