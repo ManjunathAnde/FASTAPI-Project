@@ -4,7 +4,7 @@ from database import db_session,engine
 import database_models
 
 database_models.dec_base.metadata.create_all(bind=engine)
-#create a table with all metadata in dec_base class and bind it with engine
+#create a table with all metadata in dec_base class and bind it with engine (db_url constant connection)
 
 app = FastAPI() #creating an instance of FASTAPI
 
@@ -19,10 +19,18 @@ products = [  #Instantiating the classes
     Products(id=4, name="Table", description="A wooden table", price=199.99, quantity=20)
 ]
 
+def init_db():
+    db=db_session()
+    for product in products:
+        db.add(database_models.Products(**product.model_dump()))
+    db.commit()
+init_db()
+
+
 @app.get("/products") #using GET method to display information when the user routes to 'products' in the web app. 
 def get_products():
-    db=db_session()
-    db.query
+    # db=db_session()
+    # db.query
     return products
 
 sno:int=1
